@@ -6,8 +6,7 @@
     <persistence-unit name="postgresql-example">
         <provider>org.hibernate.reactive.provider.ReactivePersistenceProvider</provider>
 
-        <class>org.hibernate.reactive.example.session.Author</class>
-        <class>org.hibernate.reactive.example.session.Book</class>
+        <class>com.jams_and_jellies.catalog_API.Product</class>
 
         <properties>
 
@@ -41,20 +40,19 @@
     <persistence-unit name="mysql-example">
         <provider>org.hibernate.reactive.provider.ReactivePersistenceProvider</provider>
 
-        <class>org.hibernate.reactive.example.session.Author</class>
-        <class>org.hibernate.reactive.example.session.Book</class>
+        <class>com.jams_and_jellies.catalog_API.Product</class>
 
         <properties>
 
             <!-- MySQL -->
             <property name="jakarta.persistence.jdbc.url"
-                      value="jdbc:mysql://localhost/hreact"/>
+                      value="jdbc:postgresql://localhost:5432/products"/>
 
             <!-- Credentials -->
             <property name="jakarta.persistence.jdbc.user"
-                      value="hreact"/>
+                      value="postgres"/>
             <property name="jakarta.persistence.jdbc.password"
-                      value="hreact"/>
+                      value="jellies"/>
 
             <!-- The Vert.x SQL Client connection pool size -->
             <property name="hibernate.connection.pool_size"
