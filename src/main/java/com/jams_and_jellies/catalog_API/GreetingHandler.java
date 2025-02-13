@@ -13,15 +13,8 @@ import reactor.core.publisher.Mono;
 public class GreetingHandler {
 
     // Creating the entity manager for hibernate
-    EntityManagerFactory emf = Persistence.createEntityManagerFactory("example");
+    EntityManagerFactory emf = Persistence.createEntityManagerFactory("jelly-postgresql");
     Mutiny.SessionFactory sessionFactory = emf.unwrap(Mutiny.SessionFactory.class);
-
-    sessionFactory.withSession(
-        session -> session.find(Product.class, id)
-            .invoke(
-                product -> 
-            )
-    );
 
     public Mono<ServerResponse> hello(ServerRequest request) {
         return ServerResponse.ok().contentType(MediaType.APPLICATION_JSON)

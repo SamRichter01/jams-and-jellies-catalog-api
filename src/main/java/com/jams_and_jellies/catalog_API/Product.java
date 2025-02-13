@@ -8,7 +8,7 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name="Products")
 class Product {
-    
+
     @Id @GeneratedValue
     private Integer id;
 
