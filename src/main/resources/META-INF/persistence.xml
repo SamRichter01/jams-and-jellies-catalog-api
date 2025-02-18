@@ -12,7 +12,11 @@
 
             <!-- PostgreSQL -->
             <property name="jakarta.persistence.jdbc.url"
-                      value="jdbc:postgresql://localhost:5432/products"/>
+                      value="jdbc:postgresql://localhost:5432/postgres"/>
+
+            <!-- SQL Dialect -->
+            <property name="hibernate.dialect"
+                      value="org.hibernate.dialect.PostgreSQLDialect"/>
 
             <!-- Credentials -->
             <property name="jakarta.persistence.jdbc.user"
